@@ -1,0 +1,20 @@
+FROM golang:1.23
+
+WORKDIR /practice
+
+COPY . .
+
+RUN go build -o portfolio .
+
+EXPOSE 80
+
+CMD [ "./portfolio" ]
+
+# 2 docker build -t dw10:0.1 .
+# 3 docker run -p 80:80 dw10:0.1
+# 4 docker run -p 8033:80 dw10:0.1
+# 5 docker run -p 8033:80 dw10:0.1
+# 6 docker login
+# 7 docker tag dw10:0.1 Arp369/dw10:0.1
+# 8 docker push Arp369/dw10:0.1
+# 9 docker push Arp369/dw10:0.1
